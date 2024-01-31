@@ -1,4 +1,3 @@
-"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,17 +7,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.count = exports.register = void 0;
-const TeamRegistration_1 = __importDefault(require("../Models/TeamRegistration"));
-const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+import Team from "../Models/TeamRegistration";
+export const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     // console.log("", req.body)
     console.log(req.body);
     try {
-        const newSession = new TeamRegistration_1.default({
+        const newSession = new Team({
             teamName: req.body.teamName,
             university: req.body.university,
             other: req.body.other,
@@ -50,9 +44,8 @@ const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         console.log(err);
     }
 });
-exports.register = register;
-const count = (req, res) => {
-    TeamRegistration_1.default.countDocuments({}).then(count => {
+export const count = (req, res) => {
+    Team.countDocuments({}).then(count => {
         console.log("Number of teams:", count);
         res.status(200).json({ teamCount: 50 - count });
     }).catch(err => {
@@ -60,4 +53,4 @@ const count = (req, res) => {
         res.status(500).send('Error counting teams');
     });
 };
-exports.count = count;
+//# sourceMappingURL=teamRegi.js.map
