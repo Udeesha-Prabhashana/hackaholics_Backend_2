@@ -16,9 +16,9 @@ dotenv.config();
 const URL = process.env.MONGO || "mongodb://localhost:27017/";
 const ORIGIN = process.env.ORIGIN || "http://localhost:3000";
 const PORT = process.env.PORT || 4000;
-const app = (0, express.default)();
+const app = express();
 app.use(express.json());
-app.use((0 , cors.default)({
+app.use(cors({
     origin: ORIGIN,
     methods: ["GET", "POST", "PUT", "DELETE"]
 }));
