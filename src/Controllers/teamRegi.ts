@@ -45,13 +45,13 @@ export const register = async (req: Request, res: Response) => {
 
 
 export const count = (req: Request, res: Response): void => {
-  Team.countDocuments({}).then(count => {
-    console.log("Number of teams:", count);
-    res.status(200).json({ teamCount: 50 - count });
-  }).catch(err => {
-    console.error('Error counting teams:', err);
-    res.status(500).send('Error counting teams');
-  });
+  // Team.countDocuments({}).then(count => {
+  //   console.log("Number of teams:", count);
+  //   res.status(200).json({ teamCount: 50 - count });
+  // }).catch(err => {
+  //   console.error('Error counting teams:', err);
+  //   res.status(500).send('Error counting teams');
+  // });
 };
 
 
