@@ -2,7 +2,7 @@ import express,{ Express , Request, Response} from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import teamRoute from "./src/Routes/team";
+import teamRoute from "./Routes/team";
 
 dotenv.config();
 
