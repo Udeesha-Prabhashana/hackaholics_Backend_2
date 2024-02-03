@@ -6,9 +6,11 @@ import teamRoute from "./Routes/team";
 
 dotenv.config();
 
-const URL = process.env.MONGO || "mongodb://localhost:27017/";
+// const URL = process.env.MONGO || "mongodb://localhost:27017/";
 const ORIGIN = process.env.ORIGIN || "http://localhost:3000";
 const PORT = process.env.PORT || 4000;
+
+const URL = "mongodb+srv://udeesha1:Udeesha1@cluster0.1ptsmqc.mongodb.net/";
 
 const app: Express = express();
 app.use(express.json());
