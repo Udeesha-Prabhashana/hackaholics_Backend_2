@@ -12,10 +12,5 @@
             "src": "/(.*)",
             "dest": "dist/index.js"
         }
-    ],
-    "functions": {
-        "api/teamregi/register": {
-            "maxDuration": 20
-        }
-    }
+    ]
 }
